@@ -1,0 +1,21 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: #0070f3;
+  margin-left: 10px;
+}
+
+.mainNav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+.mainNav li {
+	display: inline;
+}
+.mainNav a {
+	display: inline-block;
+	padding: .5em 1.5em;
+}
