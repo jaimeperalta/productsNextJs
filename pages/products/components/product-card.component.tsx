@@ -1,3 +1,4 @@
+import {showAlert} from '../../../core/alert/alert.impl';
 import styles from './product-card.component.module.css';
 
 export const ProductCardComponent = (
@@ -12,6 +13,11 @@ export const ProductCardComponent = (
         }
     }
 ) => {
+
+    const buyProduct = () => {
+        showAlert({title: 'Coming soon'});
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.imgContainer}>
@@ -27,7 +33,8 @@ export const ProductCardComponent = (
                         <p><span className={styles.price}>{product.price}</span>$</p>
                     </div>
                     <div className={styles.buttonBuy}>
-                        <button type="button">buy now</button>
+                        <button type="button"
+                            onClick={buyProduct}>buy now</button>
                     </div>
                 </div>
             </div>
