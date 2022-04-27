@@ -8,7 +8,7 @@ export const Products = (
         products: {
             name: string,
             description: string,
-            img: string,
+            image: string,
             price: number
         }[]
     }
