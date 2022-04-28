@@ -6,7 +6,7 @@ import {MessageEmptyComponent} from '../components/messageEmpty/message-empty.co
 import {SearchBarComponent} from '../components/searchBar/searchBar.component'
 import {get} from '../core/http/http.impl'
 import styles from '../styles/Home.module.css'
-import {Products} from './products/products.page'
+import Products from './products/products.page'
 
 export default function Home() {
 

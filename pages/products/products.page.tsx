@@ -1,18 +1,19 @@
-import {ProductCardComponent} from './components/product-card.component';
+import {GetStaticProps} from 'next/types';
+import ProductCardComponent from './components/product-card.component';
 import styles from './products.page.module.css';
 
-export const Products = (
+export default function Products(
     {
         products
     }: {
-        products: {
+        products: Array<{
             name: string,
             description: string,
             image: string,
             price: number
-        }[]
+        }>
     }
-) => {
+) {
     return (
         <div className={styles.grid}>
             {
@@ -22,4 +23,13 @@ export const Products = (
             }
         </div>
     )
+}
+
+export const getStaticProps: GetStaticProps = async ({params}) => {
+    const products = []
+    return {
+        props: {
+            products
+        }
+    }
 }

@@ -2,7 +2,7 @@
 const { MongoClient } = require("mongodb");
 
 const uri =
-    "mongodb+srv://jaime:imagemaker@cluster0.f2tzw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    "mongodb+srv://jaime:imagemaker@cluster0.f2tzw.mongodb.net/Inventory?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
 const getProducts = async (req, res) => {

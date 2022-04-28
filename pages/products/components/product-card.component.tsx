@@ -1,7 +1,8 @@
+import {GetStaticProps} from 'next/types';
 import {showAlert} from '../../../core/alert/alert.impl';
 import styles from './product-card.component.module.css';
 
-export const ProductCardComponent = (
+export default function ProductCardComponent(
     {
         product
     }: {
@@ -12,7 +13,7 @@ export const ProductCardComponent = (
             price: number
         }
     }
-) => {
+) {
 
     const buyProduct = () => {
         showAlert({title: 'Coming soon'});
@@ -40,4 +41,13 @@ export const ProductCardComponent = (
             </div>
         </div>
     )
+}
+
+export const getStaticProps: GetStaticProps = async ({params}) => {
+    const product = {}
+    return {
+        props: {
+            product
+        }
+    }
 }
