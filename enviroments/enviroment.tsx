@@ -1,3 +1,3 @@
 export const enviroment = {
-    host: 'http://localhost:3080'
+    host: 'https://products-next-js-six.vercel.app'
 }
